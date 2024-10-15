@@ -1,8 +1,8 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const connectDB = require('./proyecto-api/src/config/database.js');
-const itemRoutes = require('./proyecto-api/src/routes/itemRoutes.js');
-const errorHandler = require('./proyecto-api/src/middleware/errorHandler.js');
+const connectDB = require('./src/config/database.js');
+const itemRoutes = require('./src/routes/itemRoutes.js');
+const errorHandler = require('./src/middleware/errorHandler.js');
 
 dotenv.config();
 

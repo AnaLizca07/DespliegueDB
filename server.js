@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const connectDB = require('./proyecto-api/src/config/database.js');
+const connectDB = require('./src/config/database.js');
 
 const PORT = process.env.PORT || 3000;
 
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 connectDB()
     .then(() => {
         // Configurar rutas solo después de conectar a la BD
-        const itemRoutes = require('./proyecto-api/src/routes/itemRoutes.js');
+        const itemRoutes = require('./src/routes/itemRoutes.js');
         app.use('/api/items', itemRoutes);
 
         // Iniciar el servidor solo después de conectar a la BD
